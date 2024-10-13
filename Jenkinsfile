@@ -15,11 +15,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Updating Gradle Wrapper'
-                sh './gradlew wrapper --gradle-version 7.5'
-
-                echo 'Running build automation'
-                sh './gradlew build --no-daemon'
+               echo "code is building"
+            }
+        }
+        stage('Deployment stage') {
+            steps {
+               echo "code is deploying"
             }
         }
     }
