@@ -21,6 +21,7 @@ pipeline {
         stage('Deployment stage') {
             steps {
                echo "code is deploying"
+                sh 'sudo -u jenkins docker ps'
             }
         }
     }
